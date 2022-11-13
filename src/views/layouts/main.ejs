@@ -1,0 +1,63 @@
+<!-- Este es el codigo principal del sitio web, el html y el css,
+el diseno fue tomado de bootswatch-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Nodejs</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Este codigo muestra el menu en la parte de arriba de la pagina, aca se visualizar los apartados
+de inicio de sesion y de registro, adicionalmente puedes regresar a la pagina de home -->
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Login automaticaycontrol</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/signin">Signin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">Signup</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- Este codigo despliega un mensaje de error en caso de cualquier inconsistencia en los datos
+de inicio de sesion o de registro a la hora de estar autenticandolos. Signupmessage y signinmessage son
+variables de tipo req.flash asignados en la carpeta passport/local-auth.js -->
+
+    <div class="container">
+        <% if (signupMessage){ %>
+
+            <div class="alert alert-danger">
+                <%= signupMessage %>
+            </div>
+        
+        <% }%>
+    
+        
+        <% if (signinMessage){ %>
+    
+            <div class="alert alert-danger">
+                <%= signinMessage %>
+            </div>
+        
+        <% }%>
+    
+        <%- body%>
+    </div>
+    
+</body>
+</html>
