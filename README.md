@@ -1,5 +1,5 @@
 Para poder iniciar correctamente el programa, mongodb y npm deben estar instalados en el sistema y agregados a las variables
-de entorno para poder ejecutarlas desde el terminal.
+de entorno para poder ejecutarlas desde la terminal.
 
 Una vez instaladas, ejecute en la consola de visual code el comando: npm run dev , para poder iniciar el servidor y conectarse a la base de datos
 automaticamente. Si todo sale bien, en consola deben aparecer 2 mensajes diciendo que el servidor esta en el puerto 3000 y que la base de datos esta conectada.
